@@ -1,11 +1,5 @@
 import React from 'react';
-import { createGlobalStyle } from 'styled-components';
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    color: ${(props) => (props.theme === 'purple' ? 'purple' : 'white')};
-  }
-`;
+import { GlobalStyle } from '../GlobalStyle/GlobalStyle';
 
 interface Props {
 	children: React.FC[];
