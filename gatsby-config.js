@@ -14,5 +14,12 @@ module.exports = {
 				path: 'src/pages',
 			},
 		},
+		{
+			resolve: `gatsby-plugin-google-fonts`,
+			options: {
+				fonts: [`cairo`],
+				display: 'swap',
+			},
+		},
 	],
 };
