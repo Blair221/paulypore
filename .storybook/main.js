@@ -26,6 +26,17 @@ module.exports = {
 			path.resolve(__dirname, '..', 'node_modules'),
 		];
 
+		module.exports = {
+			typescript: {
+				check: false,
+				checkOptions: {},
+				reactDocgen: 'react-docgen-typescript',
+				reactDocgenTypescriptOptions: {
+					shouldExtractLiteralValuesFromEnum: true,
+					propFilter: (prop) => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true),
+				},
+			},
+		};
 		return config;
 	},
 };
