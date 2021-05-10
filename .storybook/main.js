@@ -1,3 +1,4 @@
+const path = require('path');
 module.exports = {
 	// You will want to change this to wherever your Stories will live.
 	stories: ['../stories/**/*.stories.js'],
@@ -20,6 +21,11 @@ module.exports = {
 		];
 		// Prefer Gatsby ES6 entrypoint (module) over commonjs (main) entrypoint
 		config.resolve.mainFields = ['browser', 'module', 'main'];
+		config.resolve.modules = [
+			path.resolve(__dirname, '..', 'src'),
+			path.resolve(__dirname, '..', 'node_modules'),
+		];
+
 		return config;
 	},
 };
